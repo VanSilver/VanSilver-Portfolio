@@ -65,7 +65,7 @@ form.addEventListener("submit", async function (e) {
 
   // ✅ Gửi form qua Formspree (AJAX)
   try {
-    const response = await fetch("https://formspree.io/f/xvgwqblq", {
+    const response = await fetch("", {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" }
