@@ -123,8 +123,10 @@ section {
 
 .home-content h1 span {
   background: var(--gradient);
-  background-clip: text; /* ✅ standard property */
-  -webkit-background-clip: text; /* ✅ vendor prefix for Safari */
+  background-clip: text;
+  /* ✅ standard property */
+  -webkit-background-clip: text;
+  /* ✅ vendor prefix for Safari */
   -webkit-text-fill-color: transparent;
 }
 

@@ -102,3 +102,11 @@ function showToast(message, type = "success") {
     setTimeout(() => toast.remove(), 500);
   }, 3000);
 }
+function viewProject(url) {
+  // Chuyển người dùng đến đường link được truyền vào
+  if (url) {
+    window.location.href = url;
+  } else {
+    alert("Đường dẫn dự án đang được cập nhật!");
+  }
+}

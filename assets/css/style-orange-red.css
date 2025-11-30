@@ -15,8 +15,10 @@
   --text-color: #f5f5f5;
 
   /* Màu chủ đạo bạc - đỏ ánh kim */
-  --accent-color: #c00030; /* đỏ kim loại, hơi lạnh */
-  --main-color: #a8a9ad; /* bạc trung tính */
+  --accent-color: #c00030;
+  /* đỏ kim loại, hơi lạnh */
+  --main-color: #a8a9ad;
+  /* bạc trung tính */
 
   /* Màu phụ và nhấn */
   --muted-text: #c9c9c9;
@@ -24,10 +26,10 @@
 
   /* Hiệu ứng gradient ánh kim */
   --gradient: linear-gradient(135deg, #c00030 0%, #e60045 40%, #d1d1d1 100%);
-  
+
   /* Hiệu ứng đổ bóng ánh đỏ bạc */
   --shadow-glow: 0 0 25px rgba(192, 0, 48, 0.8),
-                 0 0 35px rgba(180, 180, 180, 0.3);
+    0 0 35px rgba(180, 180, 180, 0.3);
 }
 
 
@@ -597,3 +599,181 @@ section {
     flex-direction: column;
   }
 }
+
+/* =============Style cho project============= */
+.projects-container-custom {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* --- PROJECT ROW: NỀN TỐI --- */
+.project-row {
+  background-color: #3b3b3f;
+  /* Nền card tối màu khớp theme */
+  border-radius: 16px;
+  /* Bo góc mềm mại */
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  /* Bóng đổ sâu */
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  /* Không dùng border viền để trông liền mạch như hình */
+}
+
+/* 1. TRẠNG THÁI HOVER (RÊ CHUỘT VÀO) */
+.project-row:hover {
+  transform: translateY(-5px) scale(1.01);
+  /* Hơi bay lên và to nhẹ */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border-color: #333;
+}
+
+/* 2. TRẠNG THÁI ACTIVE (KHI CLICK VÀO - SẼ ĐƯỢC JS THÊM CLASS NÀY) */
+.project-row.active {
+  transform: scale(1.05);
+  /* Phình to ra 105% */
+  z-index: 100;
+  /* Nổi lên trên tất cả các phần tử khác */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+  /* Bóng đổ rất đậm */
+  border: 1px solid #d35400;
+  /* Viền sáng màu cam */
+}
+
+/* --- PHẦN MEDIA (KHUNG ĐEN BÊN TRÁI) --- */
+.project-media-gallery {
+  flex: 0 0 500px;
+  /* Độ rộng cố định khoảng 500px */
+  padding: 20px;
+  /* Khoảng hở viền đen xung quanh ảnh */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Chia 2 cột */
+  gap: 15px;
+  /* Khoảng cách giữa 2 ảnh */
+  align-items: center;
+}
+
+.media-item {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  /* Tỉ lệ dọc */
+  object-fit: cover;
+  border-radius: 8px;
+  /* Bo góc ảnh nhẹ */
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project-row.active .media-item {
+  border: 1px solid #555;
+}
+
+/* --- PHẦN NỘI DUNG (BÊN PHẢI) --- */
+.project-content {
+  padding: 40px 50px;
+  /* Padding rộng rãi như hình mẫu */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  /* Căn giữa nội dung theo chiều dọc */
+}
+
+.project-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.project-row.active .project-title {
+  color: #d35400;
+}
+
+.project-summary {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin-bottom: 25px;
+  font-style: italic;
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+  display: inline-block;
+  /* Để gạch chân chỉ dài bằng chữ */
+  width: fit-content;
+}
+
+/* MÔ TẢ CANH ĐỀU */
+.project-description {
+  color: #d1d5db;
+  /* Màu chữ nội dung sáng sủa dễ đọc */
+  margin-bottom: 35px;
+  font-size: 1.75rem;
+  line-height: 1.7;
+  text-align: justify;
+  /* Canh đều 2 bên */
+}
+
+.tech-stack {
+  margin-top: auto;
+}
+
+.tech-label {
+  font-size: 1.5rem;
+  color: #fdfdfd;
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 600;
+}
+
+.tags span {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  border: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.project-row.active .tags span {
+  background-color: #d35400;
+  color: white;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 1024px) {
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-media-gallery {
+    width: 100%;
+    flex: none;
+    padding: 15px;
+  }
+
+  .project-content {
+    padding: 30px;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-row.active {
+    transform: scale(1.02);
+  }
+}
+
+/* =============Style cho project============= */
