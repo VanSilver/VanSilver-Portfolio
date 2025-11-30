@@ -607,97 +607,87 @@ section {
   padding: 0 20px;
 }
 
-
-/* --- PROJECT ROW: NỀN TỐI --- */
+/* --- PROJECT ROW --- */
 .project-row {
-  background-color: #3b3b3f;
-  /* Nền card tối màu khớp theme */
+  background-color: #1f242d;
+  /* Đã sửa: Màu tối sang trọng hơn */
   border-radius: 16px;
-  /* Bo góc mềm mại */
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  /* Bóng đổ sâu */
   margin-bottom: 60px;
   display: flex;
   flex-direction: row;
-  /* Không dùng border viền để trông liền mạch như hình */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  /* Chuẩn bị cho hover */
 }
 
-/* 1. TRẠNG THÁI HOVER (RÊ CHUỘT VÀO) */
+/* HOVER */
 .project-row:hover {
-  transform: translateY(-5px) scale(1.01);
-  /* Hơi bay lên và to nhẹ */
+  transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-  border-color: #333;
+  border-color: var(--accent-color);
+  /* Dùng biến màu đỏ của bạn cho đồng bộ */
 }
 
-/* 2. TRẠNG THÁI ACTIVE (KHI CLICK VÀO - SẼ ĐƯỢC JS THÊM CLASS NÀY) */
+/* ACTIVE */
 .project-row.active {
-  transform: scale(1.05);
-  /* Phình to ra 105% */
+  transform: scale(1.02);
   z-index: 100;
-  /* Nổi lên trên tất cả các phần tử khác */
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
-  /* Bóng đổ rất đậm */
-  border: 1px solid #d35400;
-  /* Viền sáng màu cam */
+  border: 1px solid var(--accent-color);
 }
 
-/* --- PHẦN MEDIA (KHUNG ĐEN BÊN TRÁI) --- */
+/* --- MEDIA (BÊN TRÁI) --- */
 .project-media-gallery {
   flex: 0 0 500px;
-  /* Độ rộng cố định khoảng 500px */
+  background-color: #080808;
+  /* Đã sửa: Thêm nền đen tạo khung */
   padding: 20px;
-  /* Khoảng hở viền đen xung quanh ảnh */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Chia 2 cột */
   gap: 15px;
-  /* Khoảng cách giữa 2 ảnh */
   align-items: center;
 }
 
 .media-item {
   width: 100%;
   aspect-ratio: 9 / 16;
-  /* Tỉ lệ dọc */
   object-fit: cover;
   border-radius: 8px;
-  /* Bo góc ảnh nhẹ */
   display: block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
 }
 
-.project-row.active .media-item {
-  border: 1px solid #555;
-}
-
-/* --- PHẦN NỘI DUNG (BÊN PHẢI) --- */
+/* --- NỘI DUNG (BÊN PHẢI) --- */
 .project-content {
   padding: 40px 50px;
-  /* Padding rộng rãi như hình mẫu */
   flex: 1;
   display: flex;
   flex-direction: column;
-  text-align: left;
   justify-content: center;
-  /* Căn giữa nội dung theo chiều dọc */
+  text-align: left;
 }
 
 .project-title {
-  font-size: 2.4rem;
+  font-size: 3rem;
+  /* Tăng size cho khớp với design hệ thống cũ */
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 10px;
   line-height: 1.2;
 }
 
-.project-row.active .project-title {
-  color: #d35400;
+.project-row.active .project-title,
+.project-row:hover .project-title {
+  color: var(--accent-color);
+  /* Hover đổi màu đỏ */
 }
 
 .project-summary {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #aaaaaa;
   margin-bottom: 25px;
@@ -705,28 +695,26 @@ section {
   border-bottom: 2px solid #333;
   padding-bottom: 15px;
   display: inline-block;
-  /* Để gạch chân chỉ dài bằng chữ */
   width: fit-content;
 }
 
-/* MÔ TẢ CANH ĐỀU */
 .project-description {
   color: #d1d5db;
-  /* Màu chữ nội dung sáng sủa dễ đọc */
   margin-bottom: 35px;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
+  /* Font size dễ đọc */
   line-height: 1.7;
   text-align: justify;
-  /* Canh đều 2 bên */
 }
 
+/* --- TAGS (ĐÃ SỬA LỖI MÀU) --- */
 .tech-stack {
   margin-top: auto;
 }
 
 .tech-label {
-  font-size: 1.5rem;
-  color: #fdfdfd;
+  font-size: 1.4rem;
+  color: var(--main-color);
   margin-bottom: 12px;
   display: block;
   font-weight: 600;
@@ -734,24 +722,26 @@ section {
 
 .tags span {
   display: inline-block;
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: #2b303b;
+  /* Đã sửa: Nền tối */
+  color: #e0e0e0;
+  /* Đã sửa: Chữ sáng để đọc được */
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 1.4rem;
   margin-right: 10px;
   margin-bottom: 10px;
   font-weight: 500;
-  border: none;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
 }
 
 .project-row.active .tags span {
-  background-color: #d35400;
+  background-color: var(--accent-color);
   color: white;
+  border-color: var(--accent-color);
 }
 
-/* --- RESPONSIVE MOBILE --- */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .project-row {
     flex-direction: column;
@@ -768,12 +758,6 @@ section {
   }
 
   .project-title {
-    font-size: 2rem;
-  }
-
-  .project-row.active {
-    transform: scale(1.02);
+    font-size: 2.5rem;
   }
 }
-
-/* =============Style cho project============= */
