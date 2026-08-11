@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar Sensor - VanSilver Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style-orange-red.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html#home" class="logo">
+      Mr. <span>VanSilver</span>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="gradient-btn" id="contact-btn">Contact Me</button>
+  </header>
+
+  <section class="projects" style="padding-top: 15rem; min-height: unset; padding-bottom: 5rem;">
+    <h2 class="heading">Project <span>Details</span></h2>
+
+    <div class="projects-container-custom">
+      <div class="project-row active" style="cursor: default; pointer-events: auto;">
+        <div class="project-media-gallery" style="grid-template-columns: 1fr;">
+          <img src="assets/img/projects/Radar-Sensor/Sensor_HLK_LD2420_ESP8266.png" alt="Radar Sensor"
+            class="media-item" style="aspect-ratio: auto; object-fit: contain; max-height: 500px; margin: 0 auto;">
+        </div>
+        <div class="project-content">
+          <div class="project-title">Radar Sensor</div>
+          <div class="project-summary">Wireless Human Presence Sensor</div>
+          <div class="project-description">
+            <p>This project implements a human presence sensor that communicates wirelessly with the Smart Stair Light controller, utilizing advanced Hi-Link radar technology.</p>
+            <p><strong>Key Features:</strong><br>
+            • Highly sensitive human motion and presence detection.<br>
+            • Sends wireless control signals directly to the Smart Stair Light system.<br>
+            • Built-in Web Server for configuring advanced sensor parameters in real-time.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Technology & Engineering:</span>
+            <div class="tags">
+              <span>ESP Microcontrollers</span>
+              <span>HLK-LD2420</span>
+              <span>HLK-LD6002B</span>
+              <span>Web Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="detail-gallery">
+        <a href="assets/img/projects/Radar-Sensor/Radar_Sensor_HLK_LD2420_ESP8266.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Radar-Sensor/Radar_Sensor_HLK_LD2420_ESP8266.png" alt="Gallery Image 1">
+        </a>
+        <a href="assets/img/projects/Radar-Sensor/Sensor_HLK_LD2420_ESP8266.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Radar-Sensor/Sensor_HLK_LD2420_ESP8266.png" alt="Gallery Image 2">
+        </a>
+      </div>
+      
+      <div style="text-align: center; margin-top: 5rem;">
+         <a href="index.html#projects" class="btn">Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://github.com/VanSilver" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@vansilver1711" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/vansilver1711/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+    <ul class="list">
+      <li><a href="">FAQ</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+    </ul>
+    <p class="copyright"> © VanSilver | All Rights Reserved</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      // Custom options
+    });
+    document.getElementById('contact-btn').addEventListener('click', () => {
+      window.location.href = 'index.html#contact';
+    });
+  </script>
+</body>
+
+</html>

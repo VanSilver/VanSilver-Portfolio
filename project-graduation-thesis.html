@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduation Thesis - VanSilver Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style-orange-red.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html#home" class="logo">
+      Mr. <span>VanSilver</span>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="gradient-btn" id="contact-btn">Contact Me</button>
+  </header>
+
+  <section class="projects" style="padding-top: 15rem; min-height: unset; padding-bottom: 5rem;">
+    <h2 class="heading">Project <span>Details</span></h2>
+
+    <div class="projects-container-custom">
+      <div class="project-row active" style="cursor: default; pointer-events: auto;">
+        <div class="project-media-gallery">
+          <img src="assets/img/projects/Graduation-thesis/KIT_MSP430F5438A_BSL.png" alt="Graduation Thesis"
+            class="media-item">
+          <iframe class="media-item" src="https://www.youtube.com/embed/G061mG5yTEQ" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="project-content">
+          <div class="project-title">Graduation Thesis</div>
+          <div class="project-summary">MSP430 Microcontroller Technical Application Practice Kit (1/2024 - 5/2024)</div>
+          <div class="project-description">
+            <p>The MSP430F5438A training kit features a modular design consisting of two main components: the
+              MSP430F5438A Devkit (Core Module) and a Peripheral Expansion Board. The expansion board is equipped with a
+              dedicated socket for seamless Devkit integration, with pinouts logically mapped to onboard peripherals.
+            </p>
+            <p>Additionally, we developed a comprehensive hands-on lab manual to guide users through practical exercises
+              with the hardware.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Technology & Engineering:</span>
+            <div class="tags">
+              <span>Hardware PCB Design</span>
+              <span>Altium Designer</span>
+              <span>MSP430</span>
+              <span>C Embedded</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="detail-gallery">
+        <a href="assets/img/projects/Graduation-thesis/KIT_MSP430F5438A_BSL.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Graduation-thesis/KIT_MSP430F5438A_BSL.png" alt="Gallery Image 1">
+        </a>
+        <a href="assets/img/projects/Graduation-thesis/ketqualuanvan.jpg" data-fancybox="gallery">
+          <img src="assets/img/projects/Graduation-thesis/ketqualuanvan.jpg" alt="Gallery Image 2">
+        </a>
+        <a href="assets/img/projects/Graduation-thesis/z7277470069528_8d7112f47a5e106aea6afc37aab497d3.jpg" data-fancybox="gallery">
+          <img src="assets/img/projects/Graduation-thesis/z7277470069528_8d7112f47a5e106aea6afc37aab497d3.jpg" alt="Gallery Image 3">
+        </a>
+        <a href="assets/img/projects/Graduation-thesis/20240413_151230.jpg" data-fancybox="gallery">
+          <img src="assets/img/projects/Graduation-thesis/20240413_151230.jpg" alt="Gallery Image 4">
+        </a>
+      </div>
+      
+      <div style="text-align: center; margin-top: 5rem;">
+         <a href="index.html#projects" class="btn">Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://github.com/VanSilver" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@vansilver1711" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/vansilver1711/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+    <ul class="list">
+      <li><a href="">FAQ</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+    </ul>
+    <p class="copyright"> © VanSilver | All Rights Reserved</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      // Custom options
+    });
+    document.getElementById('contact-btn').addEventListener('click', () => {
+      window.location.href = 'index.html#contact';
+    });
+  </script>
+</body>
+
+</html>

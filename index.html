@@ -20,6 +20,7 @@
     <nav class="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -80,6 +81,101 @@
     </div>
   </section>
 
+  <section class="skills" id="skills">
+    <h2 class="heading">Technical <span class="skills-accent">Stack</span></h2>
+    <div class="skills-container">
+      
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-microchip"></i> Microcontrollers (MCUs)
+        </div>
+        <div class="tags">
+          <span>ESP32</span>
+          <span>ESP8266</span>
+          <span>MSP430G2553</span>
+          <span>STM32 Series</span>
+          <span>Nordic nRF52840</span>
+          <span>Arduino-based</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-wifi"></i> Protocols & Communication
+        </div>
+        <div class="tags">
+          <span>MQTT</span>
+          <span>CAN Bus</span>
+          <span>RS485/ModBus RTU</span>
+          <span>HTTP/HTTPS</span>
+          <span>BLE/Bluetooth</span>
+          <span>LoRa</span>
+          <span>SPI/I2C/UART</span>
+          <span>OneWire</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-screwdriver-wrench"></i> Development Tools & Software
+        </div>
+        <div class="tags">
+          <span>Altium Designer</span>
+          <span>KiCAD</span>
+          <span>Proteus</span>
+          <span>LTspice</span>
+          <span>VS Code</span>
+          <span>PlatformIO</span>
+          <span>Arduino IDE</span>
+          <span>MATLAB/Simulink</span>
+          <span>Git & GitHub</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-code"></i> Programming Languages
+        </div>
+        <div class="tags">
+          <span>C/C++</span>
+          <span>Python</span>
+          <span>TypeScript</span>
+          <span>Assembly</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-cube"></i> Hardware & PCB Design
+        </div>
+        <div class="tags">
+          <span>PCB Layout & Design</span>
+          <span>EMI/EMC</span>
+          <span>Schematic Design</span>
+          <span>Component Selection</span>
+          <span>PI/SI Integrity</span>
+          <span>Power Distribution</span>
+          <span>FPGA Basics</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <div class="skill-title">
+          <i class="fa-solid fa-cloud"></i> IoT & Cloud Platforms
+        </div>
+        <div class="tags">
+          <span>ESP32 Web Server</span>
+          <span>OTA Firmware Updates</span>
+          <span>Firebase</span>
+          <span>Blynk IoT</span>
+          <span>ThingSpeak</span>
+          <span>Real-time Data Processing</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section class="services" id="services">
     <h2 class="heading">Services</h2>
     <div class="services-container">
@@ -117,6 +213,7 @@
           </p>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -159,11 +256,11 @@
       <div class="project-row">
         <div class="project-media-gallery">
           <img src="assets/img/projects/Smart-Stair-Light-RGB/Master_controller_top_layer.jpg" alt="Smart Stair Light"
-            class="media-item">
+            class="media-item" onclick="viewProject('project-stair-light-v2.html')" style="cursor: pointer;">
           <iframe class="media-item" src="https://www.youtube.com/embed/9xn1KpapvbE" frameborder="0"
             allowfullscreen></iframe>
         </div>
-        <div class="project-content">
+        <div class="project-content" onclick="viewProject('project-stair-light-v2.html')" style="cursor: pointer;">
           <div class="project-title">Smart Stair Light System V2</div>
           <div class="project-summary">Smart Stair Light WS2811 (4/2025 - 7/2025)</div>
           <div class="project-description">
@@ -192,11 +289,12 @@
       <div class="project-row">
         <div class="project-media-gallery">
           <img src="assets/img/projects/Smart-Stair-Light-25Step/SmartStairLight_25steps_Kathode.png"
-            alt="Smart Stair Light" class="media-item">
+            alt="Smart Stair Light" class="media-item" onclick="viewProject('project-stair-light-v1.html')"
+            style="cursor: pointer;">
           <iframe class="media-item" src="https://www.youtube.com/embed/nNyI7j526cc" frameborder="0"
             allowfullscreen></iframe>
         </div>
-        <div class="project-content">
+        <div class="project-content" onclick="viewProject('project-stair-light-v1.html')" style="cursor: pointer;">
           <div class="project-title">Smart Stair Light System V1</div>
           <div class="project-summary">Smart Stair Light 25 Steps Kathode (9/2024 - 3/2025)</div>
           <div class="project-description">
@@ -221,12 +319,75 @@
 
       <div class="project-row">
         <div class="project-media-gallery">
-          <img src="assets/img/projects/Graduation-thesis/KIT_MSP430F5438A_BSL.png" alt="Radar Sensor"
-            class="media-item">
+          <img src="assets/img/projects/Smart-Switch/SmartSwitch_Touch3_Sqr_V2.png" alt="Smart Switch"
+            class="media-item" onclick="viewProject('project-smart-switch.html')"
+            style="cursor: pointer; aspect-ratio: auto; object-fit: contain;">
+          <img src="assets/img/projects/Smart-Switch/Bottom_SmartSwitch_Touch3_Sqr_V2.png" alt="Smart Switch Bottom"
+            class="media-item" onclick="viewProject('project-smart-switch.html')"
+            style="cursor: pointer; aspect-ratio: auto; object-fit: contain;">
+        </div>
+        <div class="project-content" onclick="viewProject('project-smart-switch.html')" style="cursor: pointer;">
+          <div class="project-title">Smart Switch</div>
+          <div class="project-summary">Smart Switch Touch Sqr V2</div>
+          <div class="project-description">
+            <p>The Smart Switch project utilizes capacitive touch technology to replace traditional physical buttons,
+              offering a smooth touch experience and an elegant design for smart homes.</p>
+            <p>Powered by the ESP32 microcontroller and MQTT protocol, the system provides a robust wireless connection,
+              allowing users to easily control and monitor their devices remotely via a mobile application.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Technology & Engineering:</span>
+            <div class="tags">
+              <span>ESP32</span>
+              <span>Capacitive Touch</span>
+              <span>MQTT</span>
+              <span>Mobile App</span>
+              <span>Altium Designer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-media-gallery">
+          <img src="assets/img/projects/Radar-Sensor/Radar_Sensor_HLK_LD2420_ESP8266.png" alt="Radar Sensor"
+            class="media-item" onclick="viewProject('project-radar-sensor.html')"
+            style="cursor: pointer; aspect-ratio: auto; object-fit: contain;">
+          <img src="assets/img/projects/Radar-Sensor/Sensor_HLK_LD2420_ESP8266.png" alt="Radar Sensor"
+            class="media-item" onclick="viewProject('project-radar-sensor.html')"
+            style="cursor: pointer; aspect-ratio: auto; object-fit: contain;">
+        </div>
+        <div class="project-content" onclick="viewProject('project-radar-sensor.html')" style="cursor: pointer;">
+          <div class="project-title">Radar Sensor</div>
+          <div class="project-summary">Wireless Human Presence Sensor</div>
+          <div class="project-description">
+            <p>This project implements a human presence sensor that communicates wirelessly with the Smart Stair Light
+              controller, utilizing advanced Hi-Link radar technology.</p>
+            <p><strong>Key Features:</strong><br>
+              • Highly sensitive human motion and presence detection.<br>
+              • Sends wireless control signals directly to the Smart Stair Light system.<br>
+              • Built-in Web Server for configuring advanced sensor parameters in real-time.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Technology & Engineering:</span>
+            <div class="tags">
+              <span>ESP Microcontrollers</span>
+              <span>HLK-LD2420</span>
+              <span>HLK-LD6002B</span>
+              <span>Web Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-media-gallery">
+          <img src="assets/img/projects/Graduation-thesis/KIT_MSP430F5438A_BSL.png" alt="Graduation Thesis"
+            class="media-item" onclick="viewProject('project-graduation-thesis.html')" style="cursor: pointer;">
           <iframe class="media-item" src="https://www.youtube.com/embed/G061mG5yTEQ" frameborder="0"
             allowfullscreen></iframe>
         </div>
-        <div class="project-content">
+        <div class="project-content" onclick="viewProject('project-graduation-thesis.html')" style="cursor: pointer;">
           <div class="project-title">Graduation Thesis</div>
           <div class="project-summary">MSP430 Microcontroller Technical Application Practice Kit (1/2024 - 5/2024)</div>
           <div class="project-description">

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Stair Light V3 - VanSilver Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style-orange-red.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html#home" class="logo">
+      Mr. <span>VanSilver</span>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="gradient-btn" id="contact-btn">Contact Me</button>
+  </header>
+
+  <section class="projects" style="padding-top: 15rem; min-height: unset; padding-bottom: 5rem;">
+    <h2 class="heading">Project <span>Details</span></h2>
+
+    <div class="projects-container-custom">
+      <div class="project-row active" style="cursor: default; pointer-events: auto;">
+        <div class="project-media-gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/Master_PLC.jpg" alt="Smart Stair Light"
+            class="media-item">
+          <iframe class="media-item" src="https://www.youtube.com/embed/q7AKW9DuL5I" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="project-content">
+          <div class="project-title">Smart Stair Light System V3</div>
+          <div class="project-summary">Smart Stair Light Using Power Line Communication (5/2025 - 11/2025)</div>
+          <div class="project-description">
+            <p>The Smart Stair Light PLC project utilizes Power Line Communication (PLC) technology to transmit data
+              directly over power lines. This approach enables independent control of individual LED steps and
+              significantly simplifies installation by requiring only a two-wire power bus for the entire system.
+            </p>
+            <p> Additionally, the system features an ESP32-hosted Web Interface, enabling Over-The-Air (OTA) firmware
+              updates. It allows users to configure RGB colors, cascade speeds, and dynamic lighting effects in
+              real-time.</p>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-label">Technology & Engineering:</span>
+            <div class="tags">
+              <span>ESP32</span>
+              <span>PLC Programming</span>
+              <span>Web Server</span>
+              <span>Altium Designer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-gallery">
+        <a href="assets/img/projects/Smart-Stair-Light-PLC/Master_PLC.jpg" data-fancybox="gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/Master_PLC.jpg" alt="Gallery Image 1">
+        </a>
+        <a href="assets/img/projects/Smart-Stair-Light-PLC/Panel.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/Panel.png" alt="Gallery Image 2">
+        </a>
+        <a href="assets/img/projects/Smart-Stair-Light-PLC/Pic_Smart_Stair_Light_PLC.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/Pic_Smart_Stair_Light_PLC.png" alt="Gallery Image 3">
+        </a>
+        <a href="assets/img/projects/Smart-Stair-Light-PLC/Pic_Smart_Stair_Light_PLC_top.png" data-fancybox="gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/Pic_Smart_Stair_Light_PLC_top.png" alt="Gallery Image 4">
+        </a>
+        <a href="assets/img/projects/Smart-Stair-Light-PLC/hinh_anh_thi_cong.jpg" data-fancybox="gallery">
+          <img src="assets/img/projects/Smart-Stair-Light-PLC/hinh_anh_thi_cong.jpg" alt="Gallery Image 5">
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 5rem;">
+        <a href="index.html#projects" class="btn">Back to Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://github.com/VanSilver" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@vansilver1711" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/vansilver1711/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+    <ul class="list">
+      <li><a href="">FAQ</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+    </ul>
+    <p class="copyright"> © VanSilver | All Rights Reserved</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      // Custom options
+    });
+    document.getElementById('contact-btn').addEventListener('click', () => {
+      window.location.href = 'index.html#contact';
+    });
+  </script>
+</body>
+
+</html>
