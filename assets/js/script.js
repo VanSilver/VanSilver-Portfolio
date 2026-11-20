@@ -14,6 +14,14 @@ document.querySelectorAll('.navbar a').forEach(link => {
   };
 });
 
+// Close navbar when clicking outside on mobile
+document.addEventListener('click', (e) => {
+  if (navbar && menuIcon && !navbar.contains(e.target) && !menuIcon.contains(e.target) && navbar.classList.contains('active')) {
+    navbar.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+  }
+});
+
 document.getElementById('contact-btn').addEventListener('click', () => {
   document.querySelector('#contact').scrollIntoView({
     behavior: 'smooth'
